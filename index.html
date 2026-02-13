@@ -1,103 +1,191 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meri Best Friend Tanu le Liye💕 Get Well Soon!</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ffe6f2, #fff0f5, #e6f7ff);
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #ff69b4;
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px #ffb6c1;
-        }
-        .heart {
-            color: #ff1493;
-            font-size: 1.5em;
-        }
-        p {
-            font-size: 1.3em;
-            line-height: 1.6;
-            margin: 20px 0;
-        }
-        .message {
-            background: #fff0f5;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 25px 0;
-            border: 2px dashed #ff69b4;
-        }
-        .cute-quote {
-            font-style: italic;
-            color: #ff69b4;
-            font-size: 1.4em;
-            margin: 30px 0;
-        }
-        .emoji-big {
-            font-size: 4em;
-            margin: 20px 0;
-        }
-        footer {
-            margin-top: 50px;
-            color: #777;
-            font-size: 0.9em;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Tanu 💙</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap');
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(#e6f2ff,#cce6ff);
+    overflow-x:hidden;
+    text-align:center;
+    min-height:100vh;
+}
+
+h1{
+    margin-top:40px;
+    font-family:'Pacifico',cursive;
+    font-size:44px;
+    background:linear-gradient(45deg,#004aad,#3399ff,#66ccff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:fadeIn 2s ease-in-out;
+}
+
+/* FIX: message now always fully visible */
+.message{
+    max-width:720px;
+    margin:40px auto 80px;
+    padding:28px 32px;
+    font-size:24px;
+    line-height:1.9;
+    color:#083a7a;
+    background:rgba(255,255,255,0.65);
+    border-radius:22px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.15);
+    backdrop-filter:blur(10px);
+    position:relative;
+    z-index:2;
+    animation:fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(25px);} 
+    to{opacity:1; transform:translateY(0);} 
+}
+
+/* Falling Flowers From Top */
+.flower{
+    position:fixed;
+    width:70px;
+    height:70px;
+    animation:fallFlower linear infinite;
+    z-index:0;
+    pointer-events:none;
+}
+
+@keyframes fallFlower{
+    0%{transform:translateY(-120px) rotate(0deg); opacity:0}
+    10%{opacity:1}
+    100%{transform:translateY(110vh) rotate(360deg); opacity:0.9}
+}
+
+.petal{
+    width:35px;
+    height:35px;
+    background:#4da6ff;
+    border-radius:50%;
+    position:absolute;
+}
+.center{
+    width:30px;
+    height:30px;
+    background:#003d99;
+    border-radius:50%;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+.p1{top:0;left:20px}
+.p2{top:20px;left:0}
+.p3{top:20px;left:40px}
+.p4{top:40px;left:20px}
+
+/* Teddy Animation */
+.teddy{
+    position:relative;
+    margin:60px auto 10px;
+    width:200px;
+    height:220px;
+    animation:bounce 2s infinite ease-in-out;
+    z-index:2;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);} 
+    50%{transform:translateY(-22px);} 
+}
+
+.head{
+    width:120px;
+    height:120px;
+    background:#3399ff;
+    border-radius:50%;
+    margin:0 auto;
+    position:relative;
+}
+.ear{
+    width:45px;
+    height:45px;
+    background:#3399ff;
+    border-radius:50%;
+    position:absolute;
+    top:-15px;
+    animation:wiggle 2s infinite alternate;
+}
+@keyframes wiggle{from{transform:rotate(-10deg);} to{transform:rotate(10deg);} }
+.ear.left{left:-10px}
+.ear.right{right:-10px}
+.eye{
+    width:12px;
+    height:12px;
+    background:#001f4d;
+    border-radius:50%;
+    position:absolute;
+    top:45px;
+    animation:blink 4s infinite;
+}
+@keyframes blink{0%,95%,100%{transform:scaleY(1);}97%{transform:scaleY(0.1);} }
+.eye.left{left:35px}
+.eye.right{right:35px}
+.nose{
+    width:20px;
+    height:14px;
+    background:#001f4d;
+    border-radius:50%;
+    position:absolute;
+    top:65px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.body{
+    width:150px;
+    height:120px;
+    background:#4da6ff;
+    border-radius:80px;
+    margin:-20px auto 0;
+}
+</style>
 </head>
 <body>
 
-    <div class="container">
-     <h1> Jaldi se thik ho jao TANU! 🌸💕</h1>
-        
-        <div class="emoji-big floating">🥺💖🤒→😊🌟</div>
-        
-        <p>Tanu ye tumare liye-- " DIL NE YE KAHA HAI RAB SE TUM JALDI THIK HO JAO BUS YAHI DUA HAI MERI RAB SE.🥰</p>
-        
-        <div class="cute-quote">
-            "TU JALDI SE THIK HO JAA YRR... <br>
-             KYUNKI TERE BINA LAGTA HAI SAB BEKAR💔"
-        </div>
-        
-        <div class="message">
-            <p>TUMHE YAAD HAI NA HMM DONO KO EK SAATH 90+ LANA HAI<br>
-            APNI CARE KARNA AUR JADA PARESAN MAT HONA MY TUMARE SAATH HU 🫶</p>
-            
-            <p>TUM BUSS ITNA DHAYAN RAKHNA KI TUM STRONG HO TUMARA YE FEVER KUCH BHI NAHI KAR SAKTA.💪</p>
-        </div>
-        
-        <p class="cute-quote">MYY TUMARE SAATH HAMESA RAHUNGA. KABHI AAKELA FEEL MAT KARNA🙏❤️</p>
-        
-        <div class="emoji-big">🌈😷→🏃‍♀️✨ Get Well Super Soon!!</div>
-        
-        <p>APNI CARE KARO... 💗<br>MYY HU TUMARI HELP KARNE KE LIYE </p>
-        
-        <footer>MYNE SIRF TUMARE LIYE YE WEBSITE BANAI HAI.😍<br>AB BUS MUSKURATI RAHO AUR AARAM KARO!</footer>
+<h1>Get Well Soon Tanu 💙</h1>
+
+<div class="teddy">
+    <div class="head">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
     </div>
+    <div class="body"></div>
+</div>
+
+<div class="message">
+Tum chinta mat karo aur na hi jada paresan ho,<br>
+Tumara dost Aryan tumare saath hai.<br><br>
+Main tumhe 90+ marks dilake hi rahunga 💪📘
+</div>
+
+<script>
+function createFlower(){
+    const f=document.createElement('div');
+    f.className='flower';
+    f.style.left=Math.random()*window.innerWidth+'px';
+    f.style.top='-100px';
+    f.style.animationDuration=(5+Math.random()*5)+'s';
+    f.innerHTML=`<div class='petal p1'></div><div class='petal p2'></div><div class='petal p3'></div><div class='petal p4'></div><div class='center'></div>`;
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),10000);
+}
+setInterval(createFlower,500);
+</script>
 
 </body>
 </html>
